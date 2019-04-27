@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BasicHighLightDirective } from './basic-highlight/basic-highlight.directive';
 import { AdvancestyleDirective } from './vimal-high/advancestyle.directive';
+import { UnlessDirective } from './vimal-high/unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicHighLightDirective,
-    AdvancestyleDirective
+    AdvancestyleDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

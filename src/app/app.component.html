@@ -25,6 +25,19 @@
           {{ even }}
 
         </li>
+      <ng-template  [ngIf]="!onlyOdd">
+        <div>
+            <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers"
+            [ngClass]="{odd: even % 2 !== 0}"
+            [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow':'transparent' }">
+            {{ even }}
+  
+          </li>
+      
+      </div>
+    </ng-template>
       </div>
       </ul>
       <!-- <ng-template [ngIf]="onlyOdd">
@@ -37,6 +50,13 @@
        defaultColor="red" 
        [appAdvancestyle]="'orange'"
        >Vimal Pillai</p>
+       <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Number is 5</p>
+        <p *ngSwitchCase="10">Number is 10</p>
+        <p *ngSwitchCase="15">Number is 15</p>
+        <p *ngSwitchCase="20">Number is 20</p>
+        <p *ngSwitchDefault>Nothing to show</p>
+       </div>
     </div>
   </div>
 </div>
